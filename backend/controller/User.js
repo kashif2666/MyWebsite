@@ -187,11 +187,22 @@ export const updateUser = async (req, res) => {
       }
     }
     if (about) {
-      user.about.name = about.name;
-      user.about.title = about.title;
-      user.about.subtitle = about.subtitle;
-      user.about.description = about.description;
-      user.about.quote = about.quote;
+      if (about.name) {
+        user.about.name = about.name;
+      }
+      if (about.title) {
+        user.about.title = about.title;
+      }
+      if (about.subtitle) {
+        user.about.subtitle = about.subtitle;
+      }
+
+      if (about.description) {
+        user.about.description = about.description;
+      }
+      if (about.quote) {
+        user.about.quote = about.quote;
+      }
 
       if (about.avatar) {
         await cloudinary.v2.uploader.destroy(user.about.avatar.public_id);
@@ -328,7 +339,7 @@ export const deleteTimeline = async (req, res) => {
   }
 };
 
-export const deleteYoutube = async (req, res) => {
+export const deleteProject = async (req, res) => {
   try {
     const { id } = req.params;
     const user = await User.findById(req.user._id);
@@ -341,7 +352,7 @@ export const deleteYoutube = async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: "Deleted from Youtube",
+      message: "Deleted from Project",
     });
   } catch (error) {
     return res.status(400).json({
@@ -351,7 +362,7 @@ export const deleteYoutube = async (req, res) => {
   }
 };
 
-export const deleteProject = async (req, res) => {
+export const deleteYoutube = async (req, res) => {
   try {
     const { id } = req.params;
     const user = await User.findById(req.user._id);
@@ -364,7 +375,7 @@ export const deleteProject = async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: "Deleted from Project",
+      message: "Deleted from Youtube",
     });
   } catch (error) {
     return res.status(400).json({

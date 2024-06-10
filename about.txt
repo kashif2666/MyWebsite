@@ -1,0 +1,9 @@
+quote=" Writing code is like composing poetry; every line has a purpose, every
+          function a rhythm."
+avatar="https://github.com/kashif2666/Portfolio/blob/main/src/Images/WhatsApp%20Image%202024-06-07%20at%2016.58.15.jpeg?raw=true"    
+name="Md Kashif Raza Ansari"
+title="Full Stack Developer"
+subtitle="I am a Student"
+description="I am Md Kashif Raza Ansari, a computer science and engineering
+            student at RVS College of Engineering and Technology. I aim to
+            become a full stack developer with a focus on the MERN stack."
