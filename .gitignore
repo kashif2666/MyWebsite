@@ -1,0 +1,26 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+
+/node_modules
+/backend/config/config.env
+/frontened/node_modules
+/frontened/.pnp
+/frontened/.pnp.js
+
+# testing
+/frontened/coverage
+
+# production
+/frontened/build
+
+# misc
+/frontened/.DS_Store
+/frontened/.env.local
+/frontened/.env.development.local
+/frontened/.env.test.local
+/frontened/.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
