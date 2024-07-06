@@ -1,3 +1,4 @@
+import path from "path";
 import { app } from "./app.js";
 import dotenv from "dotenv";
 import { connectDatabse } from "./config/database.js";
